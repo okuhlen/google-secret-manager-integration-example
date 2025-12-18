@@ -10,8 +10,9 @@ After much thought, I thought it would be a good idea to create a working exampl
 
 ## Solution Setup
 
-This solution contains 2 projects:
+This solution contains 3 projects:
 
+- Application: This is a class library that contains common extensions, utilities, constants and other application related model classes.
 - SettingsLoader: This is a console application that loads secrets into your Google secret manager instance. The idea here is, you could have a powershell script or similar which runs this app when neccessary (in development, or when deploying code to production).
 - WebApiExample: This is a simple ASP.NET Core Web API application that uses the secrets loaded into your secret manager instance. More on this below.
 
@@ -19,3 +20,4 @@ This solution contains 2 projects:
 
 - Create a Google Cloud project and enable the Secret Manager API.
 - Create a service account with the Secret Manager Admin role.
+- Update the settings.csv file in the Application project with the secrets you wish to load into google secret manager. Have a look at how the example entry is formatted.
